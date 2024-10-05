@@ -96,8 +96,7 @@ public class Converter {
         for(char c : subStr.toCharArray()) {
             avData = avData * BASE + indexOf(c);
         }
-        long av = (avData & MASK) ^ XOR;
-        return av;
+        return (avData & MASK) ^ XOR;
     }
 
     /**
