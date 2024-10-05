@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bv2av:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/bv2av_jar</output-path>
+    <root id="archive" name="bv2av.jar">
+      <element id="module-output" name="bv2av" />
+    </root>
+  </artifact>
+</component>
