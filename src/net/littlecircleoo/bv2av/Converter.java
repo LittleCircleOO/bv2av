@@ -87,7 +87,8 @@ public class Converter {
             throw new IllegalArgumentException("bv cannot be empty");
         if(bvConverter.length() != BV_LEN)
             throw new IllegalArgumentException("bv must be 12 characters long");
-        if(!bvConverter.substring(0,2).equalsIgnoreCase("BV") || bvConverter.charAt(2) != '1')
+        if(!bvConverter.toString().toUpperCase().startsWith("BV1"))
+        //if(!bvConverter.substring(0,2).equalsIgnoreCase("BV") || bvConverter.charAt(2) != '1')
             throw new IllegalArgumentException("bv must start with BV1");
         swap(bvConverter,3,9);
         swap(bvConverter,4,7);
@@ -116,7 +117,8 @@ public class Converter {
             throw new IllegalArgumentException("id cannot be empty");
         if(id.startsWith("av")){
             return av2bv(id);
-        }else if(id.substring(0,2).equalsIgnoreCase("BV") && id.charAt(2) == '1'){
+        }else if(id.toUpperCase().startsWith("BV1")){
+            //id.substring(0,2).equalsIgnoreCase("BV") && id.charAt(2) == '1'
             return bv2av(id, withPrefix);
         }else{
             try {
