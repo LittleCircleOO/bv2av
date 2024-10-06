@@ -1,8 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="bv2av:jar">
+  <artifact type="jar" build-on-make="true" name="bv2av:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/bv2av_jar</output-path>
     <root id="archive" name="bv2av.jar">
       <element id="module-output" name="bv2av" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/flatlaf-intellij-themes-3.5.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/flatlaf-3.5.1.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
