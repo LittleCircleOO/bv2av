@@ -112,6 +112,12 @@ public class Converter {
         return String.valueOf(bv2av(bv));
     }
 
+    /**
+     * Convert the given AV/BV id to another id
+     * @param id The id to be converted, which can be an AV id or a BV id
+     * @param withPrefix Whether the output AV number is prefixed with "av"
+     * @return The converted id
+     */
     public static String convert(String id, boolean withPrefix){
         if(id.isEmpty())
             throw new IllegalArgumentException("id cannot be empty");
@@ -130,10 +136,20 @@ public class Converter {
         }
     }
 
+    /**
+     * Convert the given plain number aid to BV id
+     * @param aid The aid to be converted
+     * @return The converted id
+     */
     public static String convert(long aid){
         return av2bv(aid);
     }
 
+    /**
+     * Convert the given AV/BV id to another id, without the withPrefix option
+     * @param id The id to be converted, which can be an AV id or a BV id
+     * @return The converted id
+     */
     public static String convert(String id){
         return convert(id, true);
     }
